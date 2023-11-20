@@ -1,0 +1,32 @@
+/** front page content **/
+.logo {
+    color: #0000ff;
+    font-family: 'Montez', cursive;
+    font-size: 35px;
+    margin: 0px;
+}
+
+
+.logo-subheading{
+    font-family: 'Ubuntu+Mono';
+    margin: 0px;
+}
+
+
+ /* Define button styles and position */ 
+.header-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+.header-button {
+    margin: 10px 10px 0px 0px;
+    width: 90px;
+    padding: 10px;
+    font-size: 90%;
+    cursor: pointer;
+    background: #0000ff;
+    color: #fff;
+}

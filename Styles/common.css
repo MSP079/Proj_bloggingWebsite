@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("F:/Proj_bloggingWebsite/Images/BackGround.jpg");
+    background-size: cover;
+}
+
+        /** front page content **/
+.logo {
+    color: #0000ff;
+    font-family: 'Montez', cursive;
+    font-size: 35px;
+    margin: 0px;
+}
+
+
+.logo-subheading{
+    font-family: 'UbuntuMono';
+    margin: 0px;
+}
+
+
+ /* Define button styles and position */ 
+.header-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+.header-button {
+    margin: 10px 10px 0px 0px;
+    width: 90px;
+    padding: 10px;
+    font-size: 90%;
+    cursor: pointer;
+    background: #0000ff;
+    color: #fff;
+    height: 40px;
+}
+
+
+.post-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 250px;
+}
+.post-button { 
+   background: rgb(240, 178, 6);
+   width: 100px;
+   height: 30px;
+   margin: 10px;
+   border: 1px solid gray;
+} 
+
+
+
+        /** popup  window **/
+
+
+.modal-content {
+    width: 300px;
+    background :#fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: translate (-50%, -50%);
+    padding: 30px;
+    visibility: hidden;
+}
+
+.open-modal-content {
+    visibility: visible;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    
+}
+
+.modal-heading {
+    margin: 0px;
+    width: 95%;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+label {
+    font-size: 20px;
+    margin: 0px, 0px, 0px, 0px;
+    /* height: 30px; */
+}
+
+input{
+    height: 30px;
+}
+
+.modal-btn {
+    background-color: #06ad2a;
+    border: none;
+    margin-top: 20px;
+    height: 30px;
+    color: #fff;
+}
+
+ /** popup welcome window **/
+
+ .signup-message {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    margin-bottom: 0px;
+ }
+
+ .signup-link a{
+    color: #007185;
+ }
+
+ /** pen you post css **/
+
+#newPostModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-post-modal-content {
+    background: #fff;
+    width: 80%;
+    height: 80%;
+    transform: translate (-50%, -50%);
+    padding: 30px;
+    position: absolute;
+    top: 10%;
+}
+
+.new-post-modal-btn {
+    width: 15%;
+    position: fixed;
+    bottom: 20px;
+    left: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
