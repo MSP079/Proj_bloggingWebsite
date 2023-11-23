@@ -1,13 +1,24 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
 body {
-    background-image: url("F:/Proj_bloggingWebsite/Images/BackGround.jpg");
+    background-image: url("../Images/BackGround.jpg");
+    height: 100vh;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
-        /** front page content **/
+/** Header page content **/
 .logo {
     color: #0000ff;
     font-family: 'Montez', cursive;
@@ -15,30 +26,29 @@ body {
     margin: 0px;
 }
 
-
 .logo-subheading{
-    font-family: 'UbuntuMono';
+    font-family: 'Ubuntu Mono';
     margin: 0px;
 }
 
-
- /* Define button styles and position */ 
+ /* Defining button styles and position */ 
 .header-btn{
     position: absolute;
-    top: 5px;
-    right: 10px;
+    top: 0;
+    right: 0;
 }
-
 
 .header-button {
     margin: 10px 10px 0px 0px;
     width: 90px;
     padding: 10px;
-    font-size: 90%;
+    font-size: 100%;
     cursor: pointer;
     background: #0000ff;
     color: #fff;
     height: 40px;
+    border-radius: 5%;
+    border: none;
 }
 
 
@@ -47,41 +57,44 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    margin: 250px;
+    margin: 20%;
 }
+
 .post-button { 
-   background: rgb(240, 178, 6);
+   background: #DAB641;
    width: 100px;
-   height: 30px;
+   height: 40px;
    margin: 10px;
-   border: 1px solid gray;
+   font-size: 100%;
+   font-weight: 600;
+   border-radius: 5%;
+   border: none;
 } 
 
 
 
-        /** popup  window **/
-
-
-.modal-content {
-    width: 300px;
+/** popup  window **/
+.modal {
     background :#fff;
-    border-radius: 6px;
+    border-radius: 1rem;
     position: absolute;
     top: 20%;
-    left: 40%;
+    left: 30%;
     transform: translate (-50%, -50%);
-    padding: 30px;
-    visibility: hidden;
 }
-
-.open-modal-content {
-    visibility: visible;
+.modal-content {
+    display: flex;
+    justify-content: space-between;
+    width: 30rem;
+    padding: 30px;
+    height: 25rem;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .flex-container {
     display: flex;
     align-items: center;
-    
 }
 
 .modal-heading {
@@ -91,14 +104,11 @@ body {
 
 .modal-form {
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column; 
 }
 
 label {
     font-size: 20px;
-    margin: 0px, 0px, 0px, 0px;
-    /* height: 30px; */
 }
 
 input{
@@ -113,8 +123,9 @@ input{
     color: #fff;
 }
 
- /** popup welcome window **/
 
+
+ /** popup welcome window **/
  .signup-message {
     display: flex;
     justify-content: center;
@@ -126,8 +137,9 @@ input{
     color: #007185;
  }
 
- /** pen you post css **/
 
+
+ /** pen you post css **/
 #newPostModal {
     display: flex;
     justify-content: center;
@@ -155,4 +167,3 @@ input{
     align-items: center;
     margin-bottom: 15px;
 }
-

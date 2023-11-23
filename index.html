@@ -2,32 +2,34 @@
 <html>
 
 <head>
-    <!-- TODO: Include Font Awesome file here -->
-    <!-- TODO: Include Google Fonts file here -->
-    <title>ScriBBler</title>
 
+    <title>ScriBBler</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- TODO: Include Font Awesome file here -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" />
+
+
+    <!-- TODO: Include Google Fonts file here -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montez&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap">
     
 
+     <!-- bootstrap script -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link href="https://fonts.googleapis.com/css?family=Montez|Roboto|Ubuntu+Mono&display=swap" rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="Styles\common.css"> -->
+    <!-- Included  CSS JS links -->
     <link rel="stylesheet" href="Styles\common.css">
-
-    <script defer src="F:/Proj_bloggingWebsite/Scripts/common.js"></script>
+    <script defer src="../Scripts/common.js"></script>
     
     
 </head>
 
 <body>
     <!-- TODO: Include all your code for the header and home page here -->
-    
-
-    <!-- Header 8053389290-->
+    <!-- Header -->
     <div class="header-container">
         <div class="header">
             <div class="logo-container">
@@ -48,14 +50,14 @@
     
     
 
-     <!-- popup sign up window  -->
+    <!-- popup sign up window  -->
     <div id="signUpModal" class="modal">
         <div class="modal-content" id="modalcontent">
             <div class="flex-container">
                 <h2 class="modal-heading">Get Started</h2>
-                <span onclick="" class="close-btn">
-                    <i class="fa fa-times" aria-hidden="true"></i>
-                </span>
+                <button type="button" class="close-btn" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <hr class="modal-horizontal-rule">
             <form class="modal-form">
@@ -75,17 +77,16 @@
 
 
     <!-- popup sign in window  -->
-    <div id="SignInModal" class="modal">
+    <!-- <div id="SignInModal" class="modal">
         <div class="modal-content" id="modalcontent">
             <div class="flex-container">
                 <h1 class="modal-heading">Welcome Back!</h1>
-                <span onclick="" class="close-btn">
-                    <i class="fa fa-times" aria-hidden="true"></i>
-                </span>
+                <button type="button" class="close-btn" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <hr class="modal-horizontal-rule">
             <form class="modal-form">
-                
                 <label for="username" class="modal-label">Username</label>
                 <input type="text" class="modal-textbox" placeholder="Enter your username" name="username" required>
                 <label for="password" class="modal-label">Password</label>
@@ -97,19 +98,19 @@
                 <span class="signup-link" onclick=""> <a>&nbsp;Sign Up</a></span>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 
 
     <!-- Pen you post -->
-    <div id="newPostModal" class="modal">
+    <!-- <div id="newPostModal" class="modal">
         <div class="new-post-modal-content">
             <div class="flex-container">
                 <h3 class="modal-heading">Pen your Post</h3>
-                <span onclick="" class="close-btn">
-                    <i class="fa fa-times" aria-hidden="true"></i>
-                </span>
+                <button type="button" class="close-btn" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <hr class="modal-horizontal-rule">
             <form class="modal-form">
@@ -120,7 +121,7 @@
                 <button type="submit" class="modal-btn new-post-modal-btn">Create</button>
             </form> 
         </div>
-    </div>
+    </div> -->
 </body>
 
 </html>
