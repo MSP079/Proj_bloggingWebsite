@@ -22,6 +22,7 @@
 
      <!-- Included  CSS JS links -->
     <link rel="stylesheet" href="/Proj_bloggingWebsite/Styles/post.css">
+    <script defer src="./Scripts/post.js"></script>
     
 </head>
 <body>
@@ -34,11 +35,62 @@
                 <p class="logo-subheading">Explore, Imagine, Create</p>
             </div>
             <div class="header-btn">
-                <input class="header-button" type="button" onclick="" value="Sign Up">
-                <input class="header-button" type="button" onclick="" value="Sign In">
+                <input class="header-button" type="button" onclick="showSignUpModal()" value="Sign Up">
+                <input class="header-button" type="button" onclick="showSignInModal()" value="Sign In">
             </div>
         </div>
     </div>
-    
+
+    <div class="postMainLayout">
+
+
+        <div class="blogContent">
+            <div id="blogTitle" class="blogTite">
+                <h id="blogTitleNew">Everything you should know about 'module' & 'require' in Node.js</h>
+            </div>
+        </div>
+        <div class="blogAuthor">
+
+            <p class="postAuthor">Srishti Gupta</p>
+            <div id="editPost" onclick="toggleEditSave()">
+                    <button class="postEdit" id ="edtPstBtn">Edit
+                            <i style="font-size: 14px;font-weight: bolder;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </button>
+                    
+            </div>
+            
+        </div>
+
+        <div class="blogText" id="blogBodyId">
+            <p id="blogBody">
+                One of the most popular module definition patterns consists of reassigning the whole module.exports variable to a function. 
+                The main strength of this pattern is the fact that it allows you to expose only a single functionality, which provides a clear entry
+                 point for the module, making it simpler to understand and use; it also honors the principle of a small surface area very well. 
+                This way of defining modules is also known in the community as the substack pattern.
+            </p>
+        </div>
+        <div>
+        <button class="postLike" onclick="incrementCounter()">Like
+            <i style="font-size: 14px;font-weight: bolder;" class="fa fa-thumbs-up" aria-hidden="true"></i>
+
+        </button>
+        <p id="like6">Be the first one to like this!</p>
+        <!--<div style="font-family: 'Abel', sans-serif; padding-left: 5px">Be the first one to like this!</div>-->
+        <p style="font-size: 10px; font-family: 'Abel', sans-serif;padding-left: 5px">
+           <span style="font-size: 10px; font-family: 'Abel', sans-serif;padding-left: 5px" id="counterLikedBy">1</span> person likes this!</p>
+        
+    </div>
+
+
+        <div class="commentPost">
+            <textarea id="txtCommentCommentPost" class="commentPost" rows="4" cols="100" placeholder="Leave a comment"></textarea>
+        </div>
+        <button class="postLike" onclick="addComment()">Comment</button>
+        <div class="commentSection">
+            <h3>All Comments</h3>
+            <div class="allComments" id="listAllComments">
+                
+            </div>
+        </div>
 </body>
 </html>

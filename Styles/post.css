@@ -4,13 +4,15 @@
     box-sizing: border-box;
 }
 
-body, html {
+body {
     height: 100%;
     margin: 0;
+    
   }
+  
 
  /** front page content **/
- .logo {
+.logo {
     color: #0000ff;
     font-family: 'Montez', cursive;
     font-size: 35px;
@@ -22,7 +24,7 @@ body, html {
     margin: 0px;
 }
 
- /* Define button styles and position */ 
+ /* Defining button styles and position */ 
 .header-btn{
     position: absolute;
     top: 0;
@@ -33,7 +35,6 @@ body, html {
     margin: 10px 10px 0px 0px;
     width: 90px;
     padding: 10px;
-    font-size: 100%;
     cursor: pointer;
     background: #0000ff;
     color: #fff;
@@ -41,3 +42,92 @@ body, html {
     border-radius: 5%;
     border: none;
 }
+
+.blogTite {
+    font-size: 150%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    text-align:center;
+}
+
+.blogText {
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     padding-left: 5px;
+
+}
+
+.blogAuthor {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 0px 0px 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    display:table-row;
+    justify-content: space-between;
+}
+
+.blogContent{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.postMainLayout{
+    display: flex;
+    flex-direction: row;
+    display:table;
+}
+
+.postAuthor{
+    display:table-cell;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.postEdit{
+    color:white;
+    background-color: #e60073;
+    box-shadow: 0px 5px  12px -4px #e60073;
+    font-family: 'Oswald', sans-serif;
+    margin: 10px;
+    cursor: pointer;
+    font-family: Abel;
+    padding: 5px 10px;
+    font-size: 14px;
+    display:table-cell;
+    text-align: center;
+    width:70px;
+}
+
+.postLike{
+    color:white;
+    background-color: #e60073;
+    box-shadow: 0px 5px  12px -4px #e60073;
+    font-family: 'Oswald', sans-serif;
+    margin: 10px;
+    cursor: pointer;
+    font-family: Abel;
+    padding: 5px 18px;
+    font-size: 14px;
+    display:table-cell;
+    text-align: right;
+}
+
+.commentPost {
+    padding-left: 5px;
+    outline: none;
+    font-family:'Oswald', sans-serif;
+}
+
+.txtBlog{
+    border-color: pink;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100%;
+    display:block;
+    overflow:hidden;
+    width: 100%;
+    height: 260px;
+
+}
+  
+
+/* Set a style for all the remaining elements like Like button, Edit button, Comment button and so on. */
