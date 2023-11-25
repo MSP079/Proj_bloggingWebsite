@@ -18,11 +18,12 @@
 
      <!-- bootstrap script -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 
 
     <!-- Included  CSS JS links -->
-    <link rel="stylesheet" href="Styles\common.css">
-    <script defer src="../Scripts/common.js"></script>
+    <link rel="stylesheet" href="./Styles/common.css">
+    <script defer src="./Scripts/common.js"></script>
     
     
 </head>
@@ -37,13 +38,13 @@
                 <p class="logo-subheading">Explore, Imagine, Create</p>
             </div>
             <div class="header-btn">
-                <input class="header-button" type="button" onclick="headerSignUPOpenbtn()" value="Sign Up">
-                <input class="header-button" type="button" onclick="headerSignInOpenbtn()" value="Sign In">
+                <input class="header-button" type="button" onclick="showSignUpModal()" value="Sign Up">
+                <input class="header-button" type="button" onclick="showSignInModal()" value="Sign In">
             </div>
         </div>
         <div class="post-buttons-container">
-            <input class="post-button" type="button" onclick="" value="All Posts">
-            <input class="post-button" type="button" onclick="" value="Create Post">
+            <input class="post-button" type="button" onclick="navigateToBlogList()" value="All Posts">
+            <input class="post-button" type="button" onclick="showCreatePost()" value="Create Post">
         </div>
     </div>
 
@@ -52,12 +53,10 @@
 
     <!-- popup sign up window  -->
     <div id="signUpModal" class="modal">
-        <div class="modal-content" id="modalcontent">
+        <div class="modal-content" id="modal-content">
             <div class="flex-container">
                 <h2 class="modal-heading">Get Started</h2>
-                <button type="button" class="close-btn" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <span onclick="hideSignUpModal()" id="close" class="close">&times;</span>
             </div>
             <hr class="modal-horizontal-rule">
             <form class="modal-form">
@@ -77,13 +76,11 @@
 
 
     <!-- popup sign in window  -->
-    <!-- <div id="SignInModal" class="modal">
+    <div id="SignInModal" class="modal">
         <div class="modal-content" id="modalcontent">
             <div class="flex-container">
                 <h1 class="modal-heading">Welcome Back!</h1>
-                <button type="button" class="close-btn" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <span onclick="hideSignInModal()" id="close" class="close">&times;</span>
             </div>
             <hr class="modal-horizontal-rule">
             <form class="modal-form">
@@ -91,37 +88,34 @@
                 <input type="text" class="modal-textbox" placeholder="Enter your username" name="username" required>
                 <label for="password" class="modal-label">Password</label>
                 <input type="password" class="modal-textbox" placeholder="Enter your password" name="password" required>
-                <button type="submit" class="modal-btn" onclick="headerSignInClosebtn()">Sign In</button>
+                <button type="submit" class="modal-btn" onclick="signin(username, password)">Sign In</button>
             </form>
-            <div class="signup-message">
-                Not a member?
-                <span class="signup-link" onclick=""> <a>&nbsp;Sign Up</a></span>
-            </div>
+            <p class=bottom-banner>Not a member?<span onclick="hideSignInModal();showSignUpModal()" class=signup style="color: blue;">&nbsp;Sign Up</span></p>
         </div>
-    </div> -->
+    </div>
 
 
 
 
     <!-- Pen you post -->
-    <!-- <div id="newPostModal" class="modal">
+    <div id="newPostModal" class="newPostmodal">
         <div class="new-post-modal-content">
             <div class="flex-container">
                 <h3 class="modal-heading">Pen your Post</h3>
-                <button type="button" class="close-btn" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <div class="modal-head">
+                    <span onclick="hideCreatePostModal()" id="close" class="close">&times;</span>
+                </div>
             </div>
-            <hr class="modal-horizontal-rule">
+            <hr>
             <form class="modal-form">
                 <label for="postTitle" class="modal-label">Title</label>
                 <input type="text" class="modal-textbox" placeholder="Enter title your post" name="postTitle" required>
                 <label for="postContent" class="modal-label">Contents</label>
                 <textarea  name="comments" class="modal-textbox new-post-modal-textarea" cols="50" rows="20"  placeholder="Enter the contents your post" required></textarea>
-                <button type="submit" class="modal-btn new-post-modal-btn">Create</button>
+                <button type="submit" class="postModalbtn"onclick="createPost()">Create</button>
             </form> 
         </div>
-    </div> -->
+    </div>
 </body>
 
 </html>
