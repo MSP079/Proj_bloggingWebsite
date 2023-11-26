@@ -1,192 +1,38 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body, html {
-  height: 100%;
-  margin: 0;
-}
-
-body {
-    background-image: url("../Images/BackGround.jpg");
-    height: 100vh;
-    overflow: hidden;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/** Header page content **/
-.logo {
-    color: #0000ff;
+#pageTitle{
     font-family: 'Montez', cursive;
-    font-size: 35px;
-    margin: 0px;
-}
-
-.logo-subheading{
-    font-family: 'Ubuntu Mono';
-    margin: 0px;
-}
-
- /* Defining button styles and position */ 
-.header-btn{
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.header-button {
-    margin: 10px 10px 0px 0px;
-    width: 90px;
-    padding: 10px;
-    cursor: pointer;
-    background: #0000ff;
-    color: #fff;
-    height: 40px;
-    border-radius: 5%;
-    border: none;
-}
-
-
-.post-buttons-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    margin: 20%;
-}
-
-.post-button { 
-   background: #DAB641;
-   width: 100px;
-   height: 40px;
-   margin: 10px;
-   font-size: 100%;
-   font-weight: 500;
-   border-radius: 5%;
-   border: none;
-   cursor: pointer;
-} 
-
-
-
-/** popup  window **/
-.modal {
-    background :#fff;
-    border-radius: 1rem;
-    position: absolute;
-    top: 10%;
-    left: 30%;
-    /* transform: translate (-50%, -50%); */
-    visibility: hidden;
-}
-
-.open-modal {
-    visibility: visible;
-    background: #fff;
-}
-.modal-content {
-    display: flex;
-    justify-content: space-between;
-    width: 30rem;
-    padding: 30px;
-    height: 30rem;
-    flex-direction: column;
-    align-items: stretch;
-}
-
-.flex-container {
-    display: flex;
-    align-items: center;
-}
-
-.modal-heading {
-    margin: 0px;
-    width: 95%;
-    color: grey;
-    font-size: larger;
-    font-family: sans-serif;
-}
-
-.close {
-    cursor: pointer;
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1;
-    color: #000;
-    text-shadow: 0 1px 0 #fff;
-}
-
-.modal-form {
-    display: flex;
-    flex-direction: column; 
-}
-
-label {
-    font-size: 20px;
-    margin: 7px 0px;
-    font-weight: 500;
-}
-
-input{
-    height: 30px;
-    background-color: #DCDCDC;
-    border: none;
-    height: 2rem;
-    margin: 7px 0px;
-}
-
-input.modal-textbox {
-    padding: 0.375rem 0.75rem;
-}
-.modal-btn {
-    background-color: #06ad2a;
-    border: none;
-    margin-top: 20px;
-    height: 30px;
-    color: #fff;
-}
-
-
-
- /** popup welcome window **/
-.bottom-banner {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-
-
- /** pen you post css **/
-.newPostmodal {
-    visibility: hidden;
-}
-
-.open-newPostmodal {
-    visibility: visible;
-}
-
-.new-post-modal-content {
-    background: #fff;
-    width: 80%;
-    height: 90%;
-    padding: 30px;
-    position: absolute;
-    top: 8%;
-    left: 10%;
-}
-
-.postModalbtn {
-    background-color: #06ad2a;
-    border: none;
-    margin-top: 20px;
-    height: 30px;
-    color: #fff;
-    width: 20%;
-    position: relative;
-    left: 40%;
-}
+    font-size: 50px;
+    color: #112fb4;
+    margin: auto;
+    text-decoration: none;
+    margin: 10px 10px 0px 10px;    
+    }
+    
+    .sub-heading {
+      font-family: 'Ubuntu Mono';
+      margin-left: 10px;
+    }
+    
+    .modal-signin-container{
+      border: 10px solid white;
+    }
+    
+    .signinupbutton{
+      width: 120px;
+      padding: 10px;
+      border-radius: 2px;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 90%;
+      background: #0000ff;
+      color: #fff;
+      float: right;                  
+      
+      margin: 10px 10px 0px 0px;
+      font-family: Arial, Helvetica, sans-serif;
+     }
+    
+    
+    
+    
+    
+    

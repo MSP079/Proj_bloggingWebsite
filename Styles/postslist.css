@@ -1,184 +1,85 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body, html {
-    height: 100%;
-    margin: 0;
-  }
-
-body {
+body{
     background-color: #ffeedd;
 }
 
- /** front page content **/
-
-/** Header page content **/
-.logo {
-    color: #0000ff;
-    font-family: 'Montez', cursive;
-    font-size: 35px;
-    margin: 0px;
-}
-
-.logo-subheading{
-    font-family: 'Ubuntu Mono';
-    color: #000;
-    margin: 0px;
-}
-
- /* Defining button styles and position */ 
-.header-btn{
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.header-button {
-    margin: 10px 10px 0px 0px;
-    width: 90px;
-    padding: 10px;
-    cursor: pointer;
-    background: #0000ff;
-    color: #fff;
-    height: 40px;
-    border-radius: 5%;
-    border: none;
-}
-
-/** post cards display **/
-.post {
-    position: relative;
-    width: 40%;
-    background: #fff;
-    box-shadow:0 4px 10px 0 rgba(17, 4, 63, 0.2),0 4px 20px 0 rgba(79, 19, 97, 0.19);
-    margin: 10px;
-    border-radius: 15px;
-    overflow:hidden;
-}
-    
-.post-left {
-    width: 15%;            
-    max-width: 15%;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    font-weight: bold;
-    color: #000;
-    overflow: auto;
-}
-
-.post-content {
-    width: 75%;           
-    display: table-cell;
-    text-align: left;
-    background-color: #E8E8E8;
-    color: #000000;
-    border-radius: 0 15px 15px 0;
-    padding: 0 20px;      
-}
-
-.post-title{
-    font-family:'Oswald', sans-serif;
-    font-weight: bold;
-    color: #2b312b;
-    font-size: 15px;
-    height: 25px;
-    overflow:hidden;
-}
-
-.post-more {
-    float: right;
-    cursor: pointer;
-    font-size: 18px;
-    margin-right: 0 !important;
-    padding-right: 0 !important;
-    padding-bottom: 10px;
-    font-size: 30px;
-}
-
-.post-desc{
-    height: 85px;
-    margin-bottom: 0 !important;
-    overflow: hidden;
-}
-
-body {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    margin: 0 !important;
-    color: #fff;
-    background-color:#ffeedd;
-    background-size: 2000% 2000%;
-}
-
-.allPostsContainer {
+.container{
+    padding-top: 4px;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
-.post-trash {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-}
-
-/* The Modal (background) */
-.trash-modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.trash-modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 30%; /* Could be more or less, depending on screen size */
-    text-align: center;
-}
-
-.trash-buttons-container {
+.card-new{
+    border-radius: 25px;
+    height: 150px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    border-radius: 30px;
+    margin: 10px;
+    width: 500px;
+    transition: box-shadow .3s;
+  
 }
 
-.trash-modal-button-no {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
+.card-new:hover {
+    box-shadow: 0 0  5px 5px rgba(33,33,33,.2); 
+  }
+
+.side-square-wrapper{
+    height: 150px;
+    width: 17%;
     text-align: center;
-    text-decoration: none;
+    background-color: white;
+    padding: 40px 4px;
     font-size: 16px;
-    cursor: pointer;
-    width: 45%;
+    font-weight: bold;
+    color:gray;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
-.trash-modal-button-yes {
-    background-color:  #f44336; /* Red */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
+.custom-card-body{
+    height: 150px; 
+    background-color: #DCDCDC;
+    width: 83%;
+    padding: 5px;
+    font-size: 14px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px; 
+}
+
+.card-body-heading{
+   color:gray;
+   font-size: 16px;
+   font-weight: 500;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding-bottom: 5px;
+   
+}
+
+.post-text{
+    overflow: hidden; 
+    white-space: normal; 
+
+    height: 4.8em;  
+    text-overflow: -o-ellipsis-lastline; 
+}
+
+.trash-button{
+    float: right;
+    padding-right: 10px;
+    size: 10px;
     cursor: pointer;
-    width: 45%;
+}
+
+.ellipsis{
+   margin-left: 370px;
+   color: grey;
+    cursor: pointer;
+    padding-right: 120px;
+    margin-bottom: 4px; 
+ 
+  
 }
