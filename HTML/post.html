@@ -1,96 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <title>Posts</title>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-
-    <!-- CDN link -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
     <!-- TODO: Include Font Awesome file here -->
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" />
-
     <!-- TODO: Include Google Fonts file here -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montez&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montez|Roboto|Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../Styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/post.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-     <!-- Included  CSS JS links -->
-    <link rel="stylesheet" href="/Proj_bloggingWebsite/Styles/post.css">
-    <script defer src="./Scripts/post.js"></script>
-    
 </head>
-<body>
 
-     <!-- Header -->
-     <div class="header-container">
-        <div class="header">
-            <div class="logo-container">
-                <p class="logo">ScriBBler</p>
-                <p class="logo-subheading">Explore, Imagine, Create</p>
+<body style=" background-color: white;">
+    <div class="header">
+        <div class="bg-signin">
+            <button type="button" class="signinupbutton" data-toggle="modal" data-target="#exampleModal"
+                id="sign-in-button">
+                Sign In
+            </button>
+
+            <button type="button" class="signinupbutton" data-toggle="modal" data-target="#exampleModalSignUp"
+                id="sign-up-button">
+                Sign Up
+            </button>
+        </div>
+
+        <a id="pageTitle" class="logo-title">ScriBBler</a>
+        <p class="sub-heading">Explore, Imagine, Create</p>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel"
+                            style="color:grey;font-family: 'Roboto', sans-serif;font-size: larger;">Welcome Back !</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputUsername">Username</label>
+                                <input type="text" class="form-control" id="exampleInputUsername"
+                                    aria-describedby="usernameHelp" placeholder="Enter your username"
+                                    style="background-color :#DCDCDC ;" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Enter your password" style="background-color :#DCDCDC ;" required>
+                            </div>
+                            <div class="modal-signin-container">
+                                <button type="submit" class="btn btn-success btn-block">Sign In</button>
+                            </div>
+                            <div class="modal-footer border-top-0 d-flex justify-content-center">
+                                Not a member ? <a data-target="#exampleModalSignUp" data-dismiss="modal"
+                                    data-toggle="modal" href="#signup-form"> Sign Up</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="header-btn">
-                <input class="header-button" type="button" onclick="showSignUpModal()" value="Sign Up">
-                <input class="header-button" type="button" onclick="showSignInModal()" value="Sign In">
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalSignUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel"
+                            style="color:grey;font-family: 'Roboto', sans-serif;font-size: larger;">Get Started</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name"
+                                    style="background-color : 	#DCDCDC ;" required>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputUsername1">Username</label>
+                                <input type="text" class="form-control" id="exampleInputUsername1"
+                                    aria-describedby="emailHelp" placeholder="Enter your username"
+                                    style="background-color :#DCDCDC ;" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Enter your password" style="background-color :#DCDCDC ;" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Confirm Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword2"
+                                    placeholder="Re-enter your Password" style="background-color :#DCDCDC ;" required>
+                            </div>
+
+                            <div class="modal-signin-container">
+                                <button type="submit" class="btn btn-success btn-block">Sign Up</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="postMainLayout">
-
-
-        <div class="blogContent">
-            <div id="blogTitle" class="blogTite">
-                <h id="blogTitleNew">Everything you should know about 'module' & 'require' in Node.js</h>
+    <div class="post container">
+        <div class="heading-content" id="edit-heading" contenteditable="true"></div>
+        <div class="author">
+            <div class="author-name"></div>
+            <div>
+                <button id="edit-button" type="button" class="btn btn-danger" onclick="onEdit()">Edit<i
+                        class="fa fa-edit" style="padding-left: 5px;"></i></button>
             </div>
         </div>
-        <div class="blogAuthor">
 
-            <p class="postAuthor">Srishti Gupta</p>
-            <div id="editPost" onclick="toggleEditSave()">
-                    <button class="postEdit" id ="edtPstBtn">Edit
-                            <i style="font-size: 14px;font-weight: bolder;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                    </button>
-                    
+
+        <div class="post-content" id="edit-contenttext" contenteditable="true">
+        </div>
+
+        <button id="like-button" type="button" class="btn btn-danger" onclick="countLikes()"><i
+                class="fa fa-thumbs-up"></i><span id="likeButton">Like</span></button>
+        <div id="showCount">Be the first one to like this</div>
+
+        <textarea id="comment" rows="4" cols="135" placeholder="Leave a comment..." name="comment"></textarea>
+        <div><button id="comment-button" type="button" class="btn btn-danger"
+                onclick="addComment(comment)">Comment</button></div>
+        <div id="allCommentsHeading">All Comments</div>
+        <div class="comment-container">
+            <div id="comments">
             </div>
-            
         </div>
 
-        <div class="blogText" id="blogBodyId">
-            <p id="blogBody">
-                One of the most popular module definition patterns consists of reassigning the whole module.exports variable to a function. 
-                The main strength of this pattern is the fact that it allows you to expose only a single functionality, which provides a clear entry
-                 point for the module, making it simpler to understand and use; it also honors the principle of a small surface area very well. 
-                This way of defining modules is also known in the community as the substack pattern.
-            </p>
-        </div>
-        <div>
-        <button class="postLike" onclick="incrementCounter()">Like
-            <i style="font-size: 14px;font-weight: bolder;" class="fa fa-thumbs-up" aria-hidden="true"></i>
-
-        </button>
-        <p id="like6">Be the first one to like this!</p>
-        <!--<div style="font-family: 'Abel', sans-serif; padding-left: 5px">Be the first one to like this!</div>-->
-        <p style="font-size: 10px; font-family: 'Abel', sans-serif;padding-left: 5px">
-           <span style="font-size: 10px; font-family: 'Abel', sans-serif;padding-left: 5px" id="counterLikedBy">1</span> person likes this!</p>
-        
     </div>
 
 
-        <div class="commentPost">
-            <textarea id="txtCommentCommentPost" class="commentPost" rows="4" cols="100" placeholder="Leave a comment"></textarea>
-        </div>
-        <button class="postLike" onclick="addComment()">Comment</button>
-        <div class="commentSection">
-            <h3>All Comments</h3>
-            <div class="allComments" id="listAllComments">
-                
-            </div>
-        </div>
-</body>
-</html>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src=../Scripts/post.js> </script> </body> </html>
